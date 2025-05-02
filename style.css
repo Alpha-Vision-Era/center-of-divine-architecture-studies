@@ -181,7 +181,33 @@ nav a:hover {
 .card h3 {
     margin: 0.5rem 0;
 }
+/* Methodology Section - Centered Version */
+.subdomains-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  text-align: center; /* Section heading ke liye */
+}
 
+.methodology-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Vertical center */
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.method-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  margin: 0 10px; /* Equal spacing */
+}
 ```css
 /* Methodology Section Styles */
 .subdomains-section {
