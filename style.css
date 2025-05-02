@@ -182,32 +182,39 @@ nav a:hover {
     margin: 0.5rem 0;
 }
 
-/* Subdomains Section */
-.subdomains {
-    padding: 4rem 2rem;
-    background: #f1f1f1;
+```css
+/* Methodology Section Styles */
+.subdomains-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
 }
 
-.subdomain-list {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto;
+.methodology-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.subdomain-list li {
-    background: #fff;
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.5s, transform 0.5s;
+.method-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-.subdomain-list li.active {
-    opacity: 1;
-    transform: translateX(0);
+.method-card:hover {
+  transform: translateY(-5px);
+}
+
+.method-icon {
+  font-size: 2.5rem;
+  color: #e94560;
+  margin-bottom: 1rem;
 }
 
 /* Mentorship Section */
@@ -301,4 +308,20 @@ nav a.active {
     padding: 4rem 2rem;
     text-align: center;
     min-height: 60vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .methodology-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .method-card {
+    width: 80%;
+  }
+  
+  .subdomain-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
