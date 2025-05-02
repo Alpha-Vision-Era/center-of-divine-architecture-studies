@@ -8,31 +8,11 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling for Mobile */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .logo {
-    margin-bottom: 1rem;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
-  .logo h1 {
-    font-size: 1.5rem;
-  }
-}
-
+/* Header Styles */
 header {
     background: #1a1a2e;
     color: #fff;
@@ -41,6 +21,9 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo h1 {
@@ -69,6 +52,11 @@ nav a {
 
 nav a:hover {
     color: #e94560;
+}
+
+nav a.active {
+    color: #e94560;
+    border-bottom: 2px solid #e94560;
 }
 
 /* Hero Section */
@@ -122,16 +110,17 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Domains Section */
-.domains {
+/* Section Common Styles */
+section {
     padding: 4rem 2rem;
-    text-align: center;
+    scroll-margin-top: 80px;
 }
 
 .section-title {
     font-size: 2rem;
     margin-bottom: 3rem;
     position: relative;
+    text-align: center;
 }
 
 .section-title::after {
@@ -145,7 +134,7 @@ nav a:hover {
     background: #e94560;
 }
 
-/* Add this to your existing CSS */
+/* Domains Section */
 .domain-cards {
     display: flex;
     justify-content: center;
@@ -153,7 +142,7 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.card-link { /* New class for anchor tag */
+.card-link {
     text-decoration: none;
     color: inherit;
 }
@@ -169,7 +158,7 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-10px);
-    cursor: pointer; /* Hand icon on hover */
+    cursor: pointer;
 }
 
 .card i {
@@ -181,100 +170,43 @@ nav a:hover {
 .card h3 {
     margin: 0.5rem 0;
 }
-/* Methodology Section - Centered Version */
-.subdomains-section {
-  padding: 4rem 2rem;
-  background: #f8f9fa;
-  text-align: center; /* Section heading ke liye */
+
+/* Methodology Section */
+.methodology-section {
+    background: #f8f9fa;
 }
 
 .methodology-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; /* Vertical center */
-  gap: 1.5rem;
-  margin: 2rem auto;
-  max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
 }
 
 .method-card {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 220px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  margin: 0 10px; /* Equal spacing */
-}
-/* Methodology Section - Centered Version */
-.subdomains-section {
-  padding: 4rem 2rem;
-  background: #f8f9fa;
-  text-align: center; /* Section heading ke liye */
-}
-
-.methodology-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; /* Vertical center */
-  gap: 1.5rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-.method-card {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 220px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  margin: 0 10px; /* Equal spacing */
-}
-```css
-/* Methodology Section Styles */
-.subdomains-section {
-  padding: 4rem 2rem;
-  background: #f8f9fa;
-  text-align: center;
-}
-
-.methodology-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.method-card {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 220px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
 }
 
 .method-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .method-icon {
-  font-size: 2.5rem;
-  color: #e94560;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #e94560;
+    margin-bottom: 1rem;
 }
 
 /* Mentorship Section */
 .mentorship {
-    padding: 4rem 2rem;
-    text-align: center;
     background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: #fff;
 }
@@ -282,12 +214,6 @@ nav a:hover {
 .mentorship p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.mentorship p.active {
-    opacity: 1;
 }
 
 /* Footer */
@@ -334,62 +260,59 @@ footer {
     transform: translateY(0);
 }
 
+:target {
+    animation: highlight 1.5s ease;
+}
+
+@keyframes highlight {
+    from { background: rgba(233, 69, 96, 0.3); }
+    to { background: transparent; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
     .hero {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .hero-content {
         padding-right: 0;
         margin-bottom: 2rem;
     }
-
-    .domain-cards {
+    
+    .domain-cards,
+    .methodology-cards {
         flex-direction: column;
         align-items: center;
     }
-  }
-/* Active Navigation Tab Styling */
-nav a.active {
-    color: #e94560;
-    border-bottom: 2px solid #e94560;
-}
-
-/* Domain Pages ka Layout */
-.domain-page {
-    padding: 4rem 2rem;
-    text-align: center;
-    min-height: 60vh;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .methodology-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .method-card {
-    width: 80%;
-  }
-  
-  .subdomain-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-/* Add to style.css */
-html {
-  scroll-behavior: smooth; /* Smooth scrolling enable */
-}
-
-/* Highlight active section */
-:target {
-  animation: highlight 1.5s ease;
-}
-
-@keyframes highlight {
-  from { background: rgba(233, 69, 96, 0.3); }
-  to { background: transparent; }
+    
+    .card,
+    .method-card {
+        width: 80%;
+    }
+    
+    section {
+        scroll-margin-top: 0;
+    }
 }
