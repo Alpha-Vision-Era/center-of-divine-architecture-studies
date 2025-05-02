@@ -208,6 +208,33 @@ nav a:hover {
   transition: transform 0.3s;
   margin: 0 10px; /* Equal spacing */
 }
+/* Methodology Section - Centered Version */
+.subdomains-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  text-align: center; /* Section heading ke liye */
+}
+
+.methodology-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Vertical center */
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.method-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  margin: 0 10px; /* Equal spacing */
+}
 ```css
 /* Methodology Section Styles */
 .subdomains-section {
@@ -351,4 +378,18 @@ nav a.active {
   .subdomain-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+/* Add to style.css */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling enable */
+}
+
+/* Highlight active section */
+:target {
+  animation: highlight 1.5s ease;
+}
+
+@keyframes highlight {
+  from { background: rgba(233, 69, 96, 0.3); }
+  to { background: transparent; }
 }
