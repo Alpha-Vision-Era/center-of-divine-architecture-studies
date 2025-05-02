@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODAS | Center of Divine Architecture Studies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Header -->
+    <header class="fade-in">
+        <div class="logo">
+            <h1>CODAS</h1>
+            <p>Center of Divine Architecture Studies</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#domains">Domains</a></li>
+                <li><a href="#subdomains">Subdomains</a></li>
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Animation -->
+    <section class="hero slide-in">
+        <div class="hero-content">
+            <h2>A Unified Framework for Consciousness, Healing & AI</h2>
+            <p>Rooted in Cognitive Holographic Mapping (CHM) and Divine Perception.</p>
+            <a href="#domains" class="btn">Explore CODAS</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/500x300?text=CODAS+Cosmic+Architecture" alt="CODAS Framework">
+        </div>
+    </section>
+
+    <!-- Domains Section -->
+    <section id="domains" class="domains">
+        <h2 class="section-title">Three Core Domains</h2>
+        <div class="domain-cards">
+            <div class="card fade-in">
+                <i class="fas fa-atom"></i>
+                <h3>Scientific (EFE)</h3>
+                <p>Empirical Frame Exploration</p>
+            </div>
+            <div class="card fade-in">
+                <i class="fas fa-brain"></i>
+                <h3>Philosophical (ABC)</h3>
+                <p>Architecture Becomes Conscious</p>
+            </div>
+            <div class="card fade-in">
+                <i class="fas fa-mosque"></i>
+                <h3>Islamic (DPD)</h3>
+                <p>Divine Perception Discourse</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subdomains Section -->
+    <section id="subdomains" class="subdomains">
+        <h2 class="section-title">10 Standardized Subdomains</h2>
+        <ul class="subdomain-list">
+            <li class="slide-in">Research Division</li>
+            <li class="slide-in">Publication Division</li>
+            <li class="slide-in">Digital Division</li>
+            <li class="slide-in">Defense Layer</li>
+            <li class="slide-in">Limitation & Scope</li>
+            <li class="slide-in">Case Studies</li>
+            <li class="slide-in">Experimental References</li>
+            <li class="slide-in">Academy</li>
+            <li class="slide-in">Community</li>
+            <li class="slide-in">Archives</li>
+        </ul>
+    </section>
+
+    <!-- Mentorship Section -->
+    <section id="mentorship" class="mentorship">
+        <h2 class="section-title">Mentorship Program</h2>
+        <p class="fade-in">Bridging Science, Philosophy, and Divine Wisdom.</p>
+        <a href="#contact" class="btn">Join Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2024 CODAS. Developed by Syed Waleed Mehboob Ali.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const slideIns = document.querySelectorAll('.slide-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeIns.forEach(item => observer.observe(item));
+            slideIns.forEach(item => observer.observe(item));
+        });
+    </script>
+</body>
+</html>
