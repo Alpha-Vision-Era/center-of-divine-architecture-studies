@@ -8,6 +8,31 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styling for Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
+
 header {
     background: #1a1a2e;
     color: #fff;
