@@ -120,11 +120,17 @@ nav a:hover {
     background: #e94560;
 }
 
+/* Add this to your existing CSS */
 .domain-cards {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+.card-link { /* New class for anchor tag */
+    text-decoration: none;
+    color: inherit;
 }
 
 .card {
@@ -138,6 +144,7 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-10px);
+    cursor: pointer; /* Hand icon on hover */
 }
 
 .card i {
@@ -258,3 +265,15 @@ footer {
         align-items: center;
     }
   }
+/* Active Navigation Tab Styling */
+nav a.active {
+    color: #e94560;
+    border-bottom: 2px solid #e94560;
+}
+
+/* Domain Pages ka Layout */
+.domain-page {
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 60vh;
+}
